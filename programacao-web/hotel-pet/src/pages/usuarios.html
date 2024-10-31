@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Pet - Usuários</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hotel Pet</h1>
+      <div class="user-info">João da Silva</div>
+    </header>
+
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#">Pet</a></li>
+        <li><a href="#" aria-current="page">Usuários</a></li>
+        <li><a href="#">Configurações</a></li>
+        <li><a href="#">Reservas</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="#">Home</a></li>
+          <li>Usuários</li>
+        </ol>
+      </nav>
+
+      <section class="actions">
+        <button type="button">Novo</button>
+        <button type="button">Remover</button>
+        <button type="button">Mudar status</button>
+      </section>
+
+      <section class="view-options">
+        <h2>Visualizar Por:</h2>
+        <button type="button">Usuários</button>
+        <button type="button">Função</button>
+      </section>
+
+      <form class="search-form">
+        <div class="form-row">
+          <div>
+            <label for="id">Id</label>
+            <input type="text" id="id" name="id" />
+          </div>
+          <div>
+            <label for="criado">criado em</label>
+            <input type="date" id="criado" name="criado" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div>
+            <label for="nome">nome</label>
+            <input type="text" id="nome" name="nome" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="status">status</label>
+            <select id="status" name="status">
+              <option value="">Selecione</option>
+            </select>
+          </div>
+          <div>
+            <label for="funcao">função</label>
+            <select id="funcao" name="funcao">
+              <option value="">Selecione</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Pesquisar</button>
+          <button type="reset">Limpar</button>
+        </div>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th><input type="checkbox" aria-label="Selecionar todos" /></th>
+            <th>Foto</th>
+            <th>email</th>
+            <th>nome</th>
+            <th>função</th>
+            <th>status</th>
+            <th>criado em</th>
+            <th>ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td><img src="#" alt="Foto do usuário" /></td>
+            <td>joaodasilva@pet.com</td>
+            <td>João da Silva</td>
+            <td>Gerente</td>
+            <td>Ativo</td>
+            <td>19/02/2020</td>
+            <td>
+              <button type="button">Editar</button>
+              <button type="button">Visualizar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

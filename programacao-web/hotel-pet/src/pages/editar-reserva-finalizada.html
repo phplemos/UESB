@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Editar Reserva</title>
+</head>
+<body>
+    <header>
+        <h1>Hotel Pet</h1>
+        <div class="user-info">João da Silva</div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#">Pet</a></li>
+            <li><a href="#">Usuários</a></li>
+            <li><a href="#">Configurações</a></li>
+            <li><a href="#" aria-current="page">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <nav aria-label="Breadcrumb">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">reservas</a></li>
+                <li>editar reserva</li>
+            </ol>
+        </nav>
+
+        <section>
+            <h2>Editar reserva</h2>
+
+            <form>
+                <div>
+                    <label for="proprietario">Proprietário *</label>
+                    <input type="text" id="proprietario" name="proprietario" value="João da Silva" required>
+                </div>
+
+                <div>
+                    <label for="pet">Pet *</label>
+                    <input type="text" id="pet" name="pet" value="Max" required>
+                </div>
+
+                <div>
+                    <label for="periodo">Período *</label>
+                    <div class="date-range">
+                        <input type="date" id="data-inicio" name="data-inicio" value="2021-05-02" required>
+                        <input type="date" id="data-fim" name="data-fim" value="2021-05-17" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="notas">Notas</label>
+                    <textarea id="notas" name="notas" rows="4"></textarea>
+                </div>
+
+                <div>
+                    <label for="status">Status *</label>
+                    <select id="status" name="status" required>
+                        <option value="finalizada" selected>Finalizada</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Total das diárias: R$ 40,00</p>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="opcao1">
+                        <span>Opção adicional 1</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="opcao2">
+                        <span>Opção adicional 2</span>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Salvar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

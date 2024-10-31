@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Pet - Fazer Reserva</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hotel Pet</h1>
+      <div class="user-info">João da Silva</div>
+    </header>
+
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#">Pet</a></li>
+        <li><a href="#" aria-current="page">Reservas</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">reservas</a></li>
+          <li>nova reserva</li>
+        </ol>
+      </nav>
+
+      <section>
+        <h2>Fazer reserva</h2>
+
+        <form>
+          <div>
+            <label for="pet">Pet *</label>
+            <input type="text" id="pet" name="pet" value="Max" required />
+          </div>
+
+          <div>
+            <label for="periodo">Período *</label>
+            <div class="date-range">
+              <input
+                type="date"
+                id="data-inicio"
+                name="data-inicio"
+                value="2021-05-02"
+                required
+              />
+              <input
+                type="date"
+                id="data-fim"
+                name="data-fim"
+                value="2021-05-07"
+                required
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="notas">Notas</label>
+            <textarea id="notas" name="notas" rows="4"></textarea>
+          </div>
+
+          <div>
+            <p>Total das diárias: R$ 40,00</p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Salvar</button>
+            <button type="reset">Limpar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
