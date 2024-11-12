@@ -1,87 +1,48 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Pet - Novo Pet</title>
-  </head>
-  <body>
-    <header>
-      <h1>Hotel Pet</h1>
-      <div class="user-info">João da Silva</div>
-    </header>
+<section class="content-container">
+  <h2>Novo Pet</h2>
 
-    <nav class="sidebar">
-      <ul>
-        <li><a href="#" aria-current="page">Pet</a></li>
-        <li><a href="#">Usuários</a></li>
-        <li><a href="#">Configurações</a></li>
-        <li><a href="#">Reservas</a></li>
-      </ul>
-    </nav>
+  <form>
+    <div class="form-content">
+      <div class="form-fields">
+        <div>
+          <label for="proprietario">Proprietário *</label>
+          <input type="text" id="proprietario" name="proprietario" required />
+        </div>
 
-    <main>
-      <nav aria-label="Breadcrumb">
-        <ol>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Pet</a></li>
-          <li>Novo Pet</li>
-        </ol>
-      </nav>
+        <div>
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
 
-      <section>
-        <h2>Novo Pet</h2>
+        <div>
+          <label for="tipo">Tipo *</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecione</option>
+          </select>
+        </div>
 
-        <form>
-          <div class="form-content">
-            <div class="form-fields">
-              <div>
-                <label for="proprietario">Proprietário *</label>
-                <input
-                  type="text"
-                  id="proprietario"
-                  name="proprietario"
-                  required
-                />
-              </div>
+        <div>
+          <label for="raca">Raça *</label>
+          <input type="text" id="raca" name="raca" required />
+        </div>
 
-              <div>
-                <label for="nome">Nome *</label>
-                <input type="text" id="nome" name="nome" required />
-              </div>
+        <div>
+          <label for="tamanho">Tamanho *</label>
+          <select id="tamanho" name="tamanho" required>
+            <option value="">Selecione</option>
+          </select>
+        </div>
+      </div>
 
-              <div>
-                <label for="tipo">Tipo *</label>
-                <select id="tipo" name="tipo" required>
-                  <option value="">Selecione</option>
-                </select>
-              </div>
+      <div class="image-upload">
+        <label>Imagem</label>
+        <div role="img" aria-label="Área para upload de imagem"></div>
+      </div>
+    </div>
 
-              <div>
-                <label for="raca">Raça *</label>
-                <input type="text" id="raca" name="raca" required />
-              </div>
-
-              <div>
-                <label for="tamanho">Tamanho *</label>
-                <select id="tamanho" name="tamanho" required>
-                  <option value="">Selecione</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="image-upload">
-              <label>Imagem</label>
-              <div role="img" aria-label="Área para upload de imagem"></div>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit">Salvar</button>
-            <button type="reset">Limpar</button>
-          </div>
-        </form>
-      </section>
-    </main>
-  </body>
-</html>
+    <div class="form-actions">
+      <button type="submit">Salvar</button>
+      <button type="reset">Limpar</button>
+    </div>
+  </form>
+</section>

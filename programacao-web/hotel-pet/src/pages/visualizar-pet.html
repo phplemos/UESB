@@ -1,71 +1,47 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Pet - Ver Pet</title>
-  </head>
-  <body>
-    <header>
-      <h1>Hotel Pet</h1>
-      <div class="user-info">João da Silva</div>
-    </header>
+<nav aria-label="Breadcrumb">
+  <ol>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">pets</a></li>
+    <li>ver pet</li>
+  </ol>
+</nav>
 
-    <nav class="sidebar">
-      <ul>
-        <li><a href="#" aria-current="page">Pets</a></li>
-        <li><a href="#">Reservas</a></li>
-      </ul>
-    </nav>
+<section>
+  <h2>Ver pet</h2>
 
-    <main>
-      <nav aria-label="Breadcrumb">
-        <ol>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">pets</a></li>
-          <li>ver pet</li>
-        </ol>
-      </nav>
+  <div class="actions">
+    <button type="button">editar</button>
+    <button type="button">deletar</button>
+  </div>
 
-      <section>
-        <h2>Ver pet</h2>
-
-        <div class="actions">
-          <button type="button">editar</button>
-          <button type="button">deletar</button>
-        </div>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Proprietário</th>
-              <th>Id</th>
-              <th>Nome</th>
-              <th>Tipo</th>
-              <th>Raça</th>
-              <th>Imagem</th>
-              <th>Reservas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>José da Silva</td>
-              <td>12345678</td>
-              <td>Max</td>
-              <td>Cachorro</td>
-              <td>Pastor Alemão</td>
-              <td><div role="img" aria-label="Foto do pet"></div></td>
-              <td>
-                <ul>
-                  <li>02/05/2021 - 07/05/2021 (completa)</li>
-                  <li>02/05/2021 - 07/05/2021 (em andamento)</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <a href="#" class="back-button">Voltar</a>
-      </section>
-    </main>
-  </body>
-</html>
+  <table>
+    <thead>
+      <tr>
+        <th>Proprietário</th>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Raça</th>
+        <th>Imagem</th>
+        <th>Reservas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>José da Silva</td>
+        <td>12345678</td>
+        <td>Max</td>
+        <td>Cachorro</td>
+        <td>Pastor Alemão</td>
+        <td><div role="img" aria-label="Foto do pet"></div></td>
+        <td>
+          <ul>
+            <li>02/05/2021 - 07/05/2021 (completa)</li>
+            <li>02/05/2021 - 07/05/2021 (em andamento)</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="#" class="back-button">Voltar</a>
+</section>

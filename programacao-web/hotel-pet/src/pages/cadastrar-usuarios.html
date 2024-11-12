@@ -1,96 +1,54 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Pet - Editar Perfil</title>
-  </head>
-  <body>
-    <header>
-      <h1>Hotel Pet</h1>
-      <div class="user-info">João da Silva</div>
-    </header>
+<section class="content-container">
+  <h2>Editar Perfil</h2>
 
-    <nav class="sidebar">
-      <ul>
-        <li><a href="#">Pet</a></li>
-        <li><a href="#" aria-current="page">Usuários</a></li>
-        <li><a href="#">Configurações</a></li>
-        <li><a href="#">Reservas</a></li>
-      </ul>
-    </nav>
+  <form>
+    <div>
+      <label for="email">Email *</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value="joaodasilva@pet.com"
+        required
+      />
+    </div>
 
-    <main>
-      <nav aria-label="Breadcrumb">
-        <ol>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Usuario</a></li>
-          <li>Novo usuário</li>
-        </ol>
-      </nav>
+    <div>
+      <label for="nome">Nome *</label>
+      <input type="text" id="nome" name="nome" value="João" required />
+    </div>
 
-      <section>
-        <h2>Editar Perfil</h2>
+    <div>
+      <label for="sobrenome">Sobrenome</label>
+      <input type="text" id="sobrenome" name="sobrenome" value="da Silva" />
+    </div>
 
-        <form>
-          <div>
-            <label for="email">Email *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value="joaodasilva@pet.com"
-              required
-            />
-          </div>
+    <div>
+      <label for="telefone">Telefone</label>
+      <input
+        type="tel"
+        id="telefone"
+        name="telefone"
+        value="+55 (73) 98876-6543"
+      />
+    </div>
 
-          <div>
-            <label for="nome">Nome *</label>
-            <input type="text" id="nome" name="nome" value="João" required />
-          </div>
+    <div>
+      <label for="funcao">Função</label>
+      <select id="funcao" name="funcao">
+        <option value="funcionario">Funcionário</option>
+        <option value="gerente">Gerente</option>
+      </select>
+    </div>
 
-          <div>
-            <label for="sobrenome">Sobrenome</label>
-            <input
-              type="text"
-              id="sobrenome"
-              name="sobrenome"
-              value="da Silva"
-            />
-          </div>
+    <div>
+      <label for="imagem">Imagem de perfil</label>
+      <div role="img" aria-label="Área para upload de imagem de perfil"></div>
+    </div>
 
-          <div>
-            <label for="telefone">Telefone</label>
-            <input
-              type="tel"
-              id="telefone"
-              name="telefone"
-              value="+55 (73) 98876-6543"
-            />
-          </div>
-
-          <div>
-            <label for="funcao">Função</label>
-            <select id="funcao" name="funcao">
-              <option value="funcionario">Funcionário</option>
-              <option value="gerente">Gerente</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="imagem">Imagem de perfil</label>
-            <div
-              role="img"
-              aria-label="Área para upload de imagem de perfil"
-            ></div>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit">Salvar</button>
-            <button type="reset">Limpar</button>
-          </div>
-        </form>
-      </section>
-    </main>
-  </body>
-</html>
+    <div class="form-actions">
+      <button type="submit">Salvar</button>
+      <button type="reset">Limpar</button>
+    </div>
+  </form>
+</section>

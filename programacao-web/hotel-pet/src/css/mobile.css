@@ -1,0 +1,263 @@
+@import url("./colors.css");
+@import url("./fonts.css");
+
+@media (max-width: 768px) {
+  main {
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #333;
+  }
+
+  .base-site {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    border-radius: 5px;
+    background-image: url('/src/assets/images/cute-pet-collage-isolated.jpg');
+    background-size: cover;
+  }
+
+
+  .login-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    margin: 4rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: hsl(var(--zinc-100));
+  }
+  .login-section h1 {
+    font-size: 3rem;
+    color: var(--color-neutral-600);
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-arround;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 0.5rem;
+  }
+
+  .form-group-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 60%;
+  }
+
+  .form-group-input input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  .form-group-input label {
+    font-size: 1.2rem;
+    color: var(--color-neutral-500);
+  }
+
+  .form-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 60%;
+  }
+  .login-section a {
+    text-decoration: none;
+  }
+
+  .form-btn {
+    padding: 0.5rem;
+    width: 60%;
+    color: var(--color-neutral-100);
+    background-color: var(--color-primary-500);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .form-btn a {
+    color: var(--color-neutral-100);
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    background-color: hsl(var(--zinc-900));
+  }
+  .navbar-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbar-paginas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    width: 100%; /* Added to make the item fill the full width */
+    border: none;
+    border-bottom: 1px solid hsl(var(--zinc-600));
+    background-color: hsl(var(--zinc-900));
+    color: hsl(var(--zinc-100));
+  }
+
+  .navbar-item:hover {
+    background-color: hsl(var(--zinc-600));
+  }
+
+  .base-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--color-neutral-200);
+  }
+
+  .header-left {
+    flex: 1;
+    padding: 0 2rem;
+  }
+
+  .header-right {
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .search-wrapper {
+    border-radius: 4px;
+    background-color: hsl(var(--zinc-100));
+    padding-right: 12px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    color: var(--light-font);
+    box-shadow: 0 2px 6px 0 hsl(var(--zinc-100)),
+      0 24px 20px -24px hsl(var(--zinc-100));
+    overflow: hidden;
+    .dark & {
+      box-shadow: none;
+    }
+  }
+
+  .search-input {
+    border: none;
+    flex: 1;
+    outline: none;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 16px;
+    background-color: hsl(var(--zinc-100));
+    color: hsl(var(--zinc-600));
+    &:placeholder {
+      color: var(--color-neutral-600);
+      opacity: 0.6;
+    }
+  }
+
+  .profile-btn {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    border-left: 2px solid hsl(var(--zinc-600));
+
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 4px;
+    }
+
+    span {
+      color: hsl(var(--zinc-600));
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2rem;
+    padding: 2rem;
+    width: 80%;
+    height: 80%;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px 0 hsl(var(--zinc-300)),
+      0 24px 20px -24px hsl(var(--zinc-300));
+  }
+}
