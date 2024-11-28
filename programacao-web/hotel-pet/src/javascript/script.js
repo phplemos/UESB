@@ -1,6 +1,7 @@
 const conteudo = document.getElementById("content");
 const petsHandler = import("./petsHandler.js");
 const usuarioHandler = import("./usuarioHandler.js");
+const reservaHandler = import("./reservaHandler.js");
 
 // Exportando modulos de petsHandler
 window.listarPetsFiltrados = async () =>
@@ -19,6 +20,9 @@ window.listarUsuariosFiltrados = async () =>
   (await usuarioHandler).listarUsuariosFiltrados();
 window.cadastrarUsuario = async () => (await usuarioHandler).cadastrarUsuario();
 window.deletarUsuario = async () => (await usuarioHandler).deleteUsuario();
+// Exportando modulos reservaHandler
+window.updateReserva = async () => (await reservaHandler).updateReserva();
+window.deletarReserva = async () => (await reservaHandler).deleteReserva();
 // Inicializa o site
 document.addEventListener("DOMContentLoaded", () => {
   console.log(window.sessionStorage.getItem("session"));
@@ -96,6 +100,9 @@ export async function navigate(uri, id) {
       (await usuarioHandler).editarUsuario();
       break;
     case "usuarios/visualizar":
+      if (id) {
+        window.sessionStorage.setItem("idUsuario", id);
+      }
       window.sessionStorage.setItem("historico", "usuarios/visualizar");
       carregarPagina("usuario/visualizar-perfil");
       break;
@@ -105,7 +112,10 @@ export async function navigate(uri, id) {
       break;
     case "reservas":
       window.sessionStorage.setItem("historico", "reservas");
-      carregarPagina("reserva/ver-reservas");
+      await carregarPagina("reserva/ver-reservas");
+      (await reservaHandler).listarReservas(
+        (await reservaHandler).getDatasetReservas()
+      );
       break;
     case "reservas/cadastrar":
       window.sessionStorage.setItem("historico", "reservas/cadastrar");
@@ -113,7 +123,11 @@ export async function navigate(uri, id) {
       break;
     case "reservas/editar":
       window.sessionStorage.setItem("historico", "reservas/editar");
-      carregarPagina("reserva/editar-reserva");
+      if (id) {
+        window.sessionStorage.setItem("idReserva", id);
+      }
+      await carregarPagina("reserva/editar-reserva");
+      (await reservaHandler).editarReserva();
       break;
     case "login":
       carregarPagina("login");

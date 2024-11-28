@@ -1,16 +1,13 @@
 <section class="content-card-container">
-  <nav aria-label="Breadcrumb">
-    <ol>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">reservas</a></li>
-      <li>editar reserva</li>
-    </ol>
-  </nav>
-
-  <section>
-    <h2>Editar reserva</h2>
-
-    <form>
+  <section class="content-card-header">
+    <label><h2>Editar Reserva</h2></label>
+    <div>
+      <button type="button" onclick="deletarReserva()">Remover</button>
+    </div>
+  </section>
+  <section class="content-card-main">
+    <section class="edit-reserva-content-form">
+      <div class="div-interna">
       <div>
         <label for="proprietario">Proprietário *</label>
         <input
@@ -47,9 +44,12 @@
         </div>
       </div>
 
+     
+      </div>
+      <div> 
       <div>
         <label for="notas">Notas</label>
-        <textarea id="notas" name="notas" rows="4"></textarea>
+        <input id="notas" type="text"/>
       </div>
 
       <div>
@@ -62,13 +62,14 @@
       </div>
 
       <div>
-        <p>Total das diárias: R$ 40,00</p>
+        <label for="total-diarias">Total de diarias:</label>
+        <input id="total-diarias" type="text"></input>
       </div>
 
       <div class="form-actions">
-        <button type="submit">Salvar</button>
-        <button type="reset">Limpar</button>
+        <button onclick="updateReserva()" type="submit">Salvar</button>
       </div>
-    </form>
+      </div>
+    </section>
   </section>
 </section>

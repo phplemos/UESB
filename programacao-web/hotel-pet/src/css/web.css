@@ -291,7 +291,7 @@
     border-radius: 4px;
     box-shadow: 0 2px 6px 0 hsl(var(--zinc-300)),
       0 24px 20px -24px hsl(var(--zinc-300));
-    overflow-x: hidden; /* Impede que o conteúdo "vaze" horizontalmente */
+    overflow-x: scroll; /* Impede que o conteúdo "vaze" horizontalmente */
   }
 
   .content-card-header {
@@ -308,8 +308,10 @@
     padding: 2rem 0;
     align-items: center;
     gap: 2rem;
+    max-width: 100%;
     width: 100%;
     border-radius: 5px;
+
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: hsl(var(--zinc-100)); */
   }
@@ -396,7 +398,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap:1rem;
+    gap: 1rem;
     width: 60%;
 
     input[type="text"] {
@@ -438,6 +440,19 @@
       width: 100%;
     }
   }
+
+  .edit-reserva-content-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    div{
+      display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    }
+  }
+
 
   .visualizar-pet-agenda {
     display: flex;
@@ -515,8 +530,65 @@
     background-color: #cbd5e0;
   }
 
+  .reserva-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid hsl(var(--zinc-100));
+    border-radius: 0.5rem;
+    max-width: 100%; /* Limita a largura do contêiner */
+    overflow-x: auto; /* Ativa a rolagem horizontal */
+    color: hsl(var(--zinc-100));
+  }
+
+  .reserva-table th,
+  .reserva-table td {
+    border-bottom: 1px solid hsl(var(--zinc-100));
+    color: hsl(var(--zinc-700));
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+
+  .reserva-table th {
+    background-color: hsl(var(--zinc-700));
+    color: hsl(var(--zinc-100));
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .reserva-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .reserva-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+
+  .reserva-table button {
+    padding: 0.25rem 0.5rem;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+  }
+
+  .reserva-table button:hover {
+    background-color: #cbd5e0;
+  }
+
+  .reserva-table .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .reserva-table input[type="checkbox"] {
+    cursor: pointer;
+  }
+
   .pet-table {
-    width: 99%;
     border-collapse: separate;
     border-spacing: 0;
     border: 1px solid hsl(var(--zinc-100));
