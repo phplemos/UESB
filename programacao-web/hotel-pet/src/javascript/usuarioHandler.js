@@ -12,8 +12,8 @@ export function visualizarUsuario() {
   const status = document.getElementById("status");
   const senha = document.getElementById("senha");
   const pId = document.createElement("p");
-  pId.innerHTML = " " + usuario.id;
-  pEmail = document.createElement("p");
+  pId.innerHTML = " " + idSess;
+  const pEmail = document.createElement("p");
   pEmail.innerHTML = " " + usuario.email;
   const pNome = document.createElement("p");
   pNome.innerHTML = " " + usuario.nome;
@@ -56,7 +56,7 @@ export function listarUsuarios(usuarios) {
             <button onclick="navigate('usuarios/editar',${usuario.id})" type="button">
               Editar
             </button>
-            <button onclick="navigate('usuarios/visualizar')" type="button">
+            <button onclick="navigate('usuarios/visualizar',${usuario.id})" type="button">
               Visualizar
             </button>
           </td>

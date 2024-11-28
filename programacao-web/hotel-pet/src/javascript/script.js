@@ -104,7 +104,7 @@ export async function navigate(uri, id) {
         window.sessionStorage.setItem("idUsuario", id);
       }
       window.sessionStorage.setItem("historico", "usuarios/visualizar");
-      carregarPagina("usuario/visualizar-perfil");
+      await carregarPagina("usuario/visualizar-perfil");
       (await usuarioHandler).visualizarUsuario();
       break;
     case "configuracoes":
