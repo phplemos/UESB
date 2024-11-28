@@ -1,0 +1,83 @@
+<section class="content-card-container">
+  <section class="content-card-header">
+    <label><h2>Reservas</h2></label>
+    <section class="usuario-header-actions">
+      <button onclick="navigate('usuarios/cadastrar')" type="">Nova</button>
+    </section>
+  </section>
+  <section class="content-card-main">
+    <div class="usuarios-search-form">
+      <div>
+        <label for="id">Id</label>
+        <input
+          type="text"
+          id="idFilter"
+          onchange="listarUsuariosFiltrados()"
+          name="id"
+        />
+        <label for="proprietario">Proprietário</label>
+        <input
+          type="email"
+          id="emailFilter"
+          onchange="listarUsuariosFiltrados()"
+          name="email"
+        />
+      </div>
+
+      <div>
+        <label for="pet">Nome Pet</label>
+        <input
+          type="text"
+          id="petFilter"
+          onchange="listarUsuariosFiltrados()"
+          name="nome"
+        />
+        <label for="totalFilter">Total</label>
+        <input type="text" name="totalFilter" id="totalFilter" />
+      </div>
+      <div>
+        <label>Periodo</label>
+        <input
+          type="date"
+          id="periodoInicioFilter"
+          name="periodoInicioFilter"
+        />
+        <input type="date" id="periodoFimFilter" name="periodoFimFilter" />
+      </div>
+      <div class="usuarios-filtro-select">
+        <div>
+          <label for="statusFilter">Status</label>
+          <select id="statusFilter" name="statusFilter" required>
+            <option value="reservada">Reservada</option>
+            <option value="emProgresso">Em Progresso</option>
+            <option value="finalizada">Finalizada</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button onclick="listarUsuariosFiltrados()" type="submit">
+          Pesquisar
+        </button>
+      </div>
+    </div>
+    <table class="pet-table">
+      <thead>
+        <th>Id:</th>
+        <th>Proprietário:</th>
+        <th>Pet:</th>
+        <th>Chegada:</th>
+        <th>Partida:</th>
+        <th>Notas:</th>
+        <th>Anotações dos Funcionários:</th>
+        <th>Imagens:</th>
+        <th>Status:</th>
+        <th>Total das diárias:</th>
+        <th>Recibo:</th>
+        <th>Criado em:</th>
+        <th>Atualizado em:</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</section>

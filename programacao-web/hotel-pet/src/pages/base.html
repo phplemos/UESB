@@ -6,13 +6,16 @@
     <div class="navbar-container">
       <ul class="navbar-paginas">
         <li>
-          <button class="navbar-item" onclick="carregarPagina('pets')">
+          <button class="navbar-item" onclick="navigate('pets')">
             <img src="/src/assets/icons/home.svg" alt="" srcset="" width="24" />
             <p>Pets</p>
           </button>
         </li>
         <li>
-          <button class="navbar-item" onclick="carregarPagina('usuarios')">
+          <button
+            class="navbar-item"
+            onclick="navigate('usuarios')"
+          >
             <img
               src="/src/assets/icons/users.svg"
               alt=""
@@ -23,7 +26,7 @@
           </button>
         </li>
         <li>
-          <button class="navbar-item" onclick="carregarPagina('configuracoes')">
+          <button class="navbar-item" onclick="navigate('configuracoes')">
             <img
               src="/src/assets/icons/settings.svg"
               alt=""
@@ -34,7 +37,10 @@
           </button>
         </li>
         <li>
-          <button class="navbar-item" onclick="carregarPagina('ver-reservas')">
+          <button
+            class="navbar-item"
+            onclick="navigate('reservas')"
+          >
             <img
               src="/src/assets/icons/reservas.svg"
               alt=""
@@ -50,27 +56,7 @@
 
   <section class="base-content">
     <section class="header-content">
-      <div class="header-left">
-        <div class="search-wrapper">
-          <input class="search-input" type="text" placeholder="Search" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="feather feather-search"
-            viewBox="0 0 24 24"
-          >
-            <defs></defs>
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="M21 21l-4.35-4.35"></path>
-          </svg>
-        </div>
-      </div>
+      <div class="header-left"></div>
       <div class="header-right">
         <button class="profile-btn">
           <img src="https://assets.codepen.io/3306515/IMG_2025.jpg" />

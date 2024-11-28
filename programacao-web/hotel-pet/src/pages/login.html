@@ -4,7 +4,7 @@
   <section class="login-section">
     <h1 class="color-primary-800">Hotel Pet</h1>
 
-    <form class="form" action="#" method="post">
+    <div class="form" action="#" method="post">
       <div class="form-group-input">
         <label for="login">Login</label>
         <input type="text" id="login" name="login" required />
@@ -23,13 +23,15 @@
         <a href="#" class="forgot-password">Esqueci a senha</a>
       </div>
 
-      <button class="form-btn" type="submit" onclick="carregarPagina('pets')">
+      <button class="form-btn" type="submit" onclick="login()">
         <a href="">Enviar</a>
       </button>
-    </form>
+    </div>
 
     <footer>
-      <a href="#" class="create-account">Criar uma conta</a>
+      <a href="#" class="create-account" onclick="navigate('criar-conta')"
+        >Criar uma conta</a
+      >
     </footer>
   </section>
 </section>

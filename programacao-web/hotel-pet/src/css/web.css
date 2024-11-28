@@ -16,9 +16,27 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+  }
+
+  .base-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
     width: 100%;
+    background-color: hsl(var(--zinc-100));
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Impede que o conteúdo "vaze" horizontalmente */
   }
 
   .login-container {
@@ -31,7 +49,7 @@
   }
 
   .image-container {
-    background-image: url('/src/assets/images/cute-pet-collage-isolated.jpg');
+    background-image: url("/src/assets/images/cute-pet-collage-isolated.jpg");
     background-size: cover;
     background-position: center;
     border-top-left-radius: 5px;
@@ -42,8 +60,6 @@
     height: 70%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-
-
 
   .login-section {
     display: flex;
@@ -135,6 +151,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    overflow: hidden; /* Impede que o conteúdo "vaze" horizontalmente */
   }
 
   .navbar-paginas {
@@ -158,16 +175,6 @@
 
   .navbar-item:hover {
     background-color: hsl(var(--zinc-600));
-  }
-
-  .base-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-    height: 100%;
-    width: 100%;
-    background-color: hsl(var(--zinc-100));
   }
 
   .header-content {
@@ -249,29 +256,320 @@
       font-weight: 700;
     }
   }
-
-  .main-content {
+  .usuarios-search-form {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+    select {
+      width: 20%;
+    }
+  }
+  .pets-search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+    select {
+      width: 20%;
+    }
   }
 
-  .content-container {
+  .content-card-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     margin: 2rem;
     padding: 2rem;
-    width: 80%;
-    height: 80%;
+    gap: 2rem;
+    width: 100%;
     border-radius: 4px;
     box-shadow: 0 2px 6px 0 hsl(var(--zinc-300)),
       0 24px 20px -24px hsl(var(--zinc-300));
+    overflow-x: hidden; /* Impede que o conteúdo "vaze" horizontalmente */
+  }
+
+  .content-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .content-card-main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    border-radius: 5px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: hsl(var(--zinc-100)); */
+  }
+
+  .cadastro-usuario-container-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha a imagem ao topo */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 35%; /* Ajusta o tamanho da área da imagem */
+    height: 35%;
+    gap: 1rem;
+  }
+  .cadastro-usuario-image {
+    width: 100%; /* Preenche o container */
+    height: 200px; /* Define uma altura padrão */
+    background-color: #333;
+    border-radius: 4px;
+  }
+
+  .cadastro-usuario-content-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .cadastro-usuario-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 1rem;
+    .form-actions {
+      display: flex;
+      justify-content: flex-end; /* Alinha os botões ao final */
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .usuario-header-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 2rem;
+    width: 100%;
+
+    height: 45px;
+
+    .view-options-label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .view-options {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+
+  .usuarios-filtro-select {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1rem;
+    select {
+      width: 100%;
+    }
+  }
+
+  .edit-pet-content-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 80%;
+  }
+
+  .edit-pet-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:1rem;
+    width: 60%;
+
+    input[type="text"] {
+      width: 91%;
+    }
+    select {
+      width: 94%;
+    }
+  }
+  .edit-pet-container-label {
+    width: 40%;
+    height: 40%;
+  }
+
+  .edit-pet-image {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 4px;
+  }
+
+  .visualizar-pet-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+  }
+
+  .pet-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    div {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+
+  .visualizar-pet-agenda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+
+    #img-pet {
+      width: 230px;
+      height: 120px;
+      background-color: #333;
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #4a5568;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%234a5568' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+  }
+
+  .form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  button[type="submit"] {
+    background-color: #4299e1;
+    color: white;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #3182ce;
+  }
+
+  button[type="reset"] {
+    background-color: #e2e8f0;
+    color: #4a5568;
+  }
+
+  button[type="reset"]:hover {
+    background-color: #cbd5e0;
+  }
+
+  .pet-table {
+    width: 99%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid hsl(var(--zinc-100));
+    border-radius: 0.5rem;
+    overflow: hidden;
+    color: hsl(var(--zinc-100));
+  }
+
+  .pet-table th,
+  .pet-table td {
+    border-bottom: 1px solid hsl(var(--zinc-100));
+    color: hsl(var(--zinc-700));
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+
+  .pet-table th {
+    background-color: hsl(var(--zinc-700));
+    color: hsl(var(--zinc-100));
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .pet-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .pet-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+
+  .pet-table button {
+    padding: 0.25rem 0.5rem;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+  }
+
+  .pet-table button:hover {
+    background-color: #cbd5e0;
+  }
+
+  .pet-table .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .pet-table input[type="checkbox"] {
+    cursor: pointer;
   }
 }

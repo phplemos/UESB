@@ -1,0 +1,74 @@
+<section class="content-card-container">
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">reservas</a></li>
+      <li>editar reserva</li>
+    </ol>
+  </nav>
+
+  <section>
+    <h2>Editar reserva</h2>
+
+    <form>
+      <div>
+        <label for="proprietario">Proprietário *</label>
+        <input
+          type="text"
+          id="proprietario"
+          name="proprietario"
+          value="José da Silva"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="pet">Pet</label>
+        <input type="text" id="pet" name="pet" value="Max" />
+      </div>
+
+      <div>
+        <label for="periodo">Período *</label>
+        <div class="date-range">
+          <input
+            type="date"
+            id="data-inicio"
+            name="data-inicio"
+            value="2021-05-02"
+            required
+          />
+          <input
+            type="date"
+            id="data-fim"
+            name="data-fim"
+            value="2021-05-07"
+            required
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="notas">Notas</label>
+        <textarea id="notas" name="notas" rows="4"></textarea>
+      </div>
+
+      <div>
+        <label for="status">Status *</label>
+        <select id="status" name="status" required>
+          <option value="em-andamento">Em andamento</option>
+          <option value="encerrada">Encerrada</option>
+          <option value="finalizada">Finalizada</option>
+        </select>
+      </div>
+
+      <div>
+        <p>Total das diárias: R$ 40,00</p>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Salvar</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+  </section>
+</section>

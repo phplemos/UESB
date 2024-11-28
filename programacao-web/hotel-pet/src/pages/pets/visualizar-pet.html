@@ -1,0 +1,64 @@
+<section class="content-card-container">
+  <section class="content-card-header">
+    <label>Ver pet</label>
+
+    <div class="actions">
+      <button type="button">editar</button>
+      <button onclick="deletarPet()" type="button">deletar</button>
+    </div>
+  </section>
+
+  <section class="content-card-main">
+    <section class="visualizar-pet-container">
+      <section class="pet-info">
+        <div id="id">
+          <label>Id:</label>
+        </div>
+        <div id="proprietario">
+          <label>Proprietário:</label>
+        </div>
+        <div id="nome">
+          <label>Nome:</label>
+        </div>
+        <div id="tipo">
+          <label>Tipo:</label>
+        </div>
+        <div id="raca">
+          <label>Raça:</label>
+        </div>
+        <div id="tamanho">
+          <label>Tamanho:</label>
+        </div>
+      </section>
+
+      <section class="visualizar-pet-agenda">
+        <div>
+          <label>Imagem:</label>
+          <div id="img-pet" role="img" aria-label="Foto do pet"></div>
+        </div>
+        <label>Agenda:</label>
+        <table class="pet-table">
+          <thead>
+            <tr>
+              <th>Dia de abertura</th>
+              <th>Dia de fechamento</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05/05/2024</td>
+              <td>07/06/2024</td>
+              <td>completa</td>
+            </tr>
+            <tr>
+              <td>05/05/2024</td>
+              <td>07/06/2024</td>
+              <td>em andamento</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </section>
+</section>

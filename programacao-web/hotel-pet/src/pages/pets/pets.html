@@ -1,0 +1,40 @@
+<section class="content-card-container">
+  <section class="content-card-header">
+    <label><h2>Pets</h2></label>
+    <!-- carregarPagina('pets/cadastrar-pet') -->
+    <button onclick="navigate('pets/cadastrar')" type="button">Novo Pet</button>
+  </section>
+  <section class="content-card-main">
+    <div class="pets-search-form">
+      <label for="id">Busca por tipo</label>
+      <select name="tipo" id="tipo">
+        <option value="id">Id</option>
+        <option value="raca">Raça</option>
+        <option value="nome">Nome</option>
+      </select>
+      <input
+        type="text"
+        id="busca"
+        name="busca"
+        placeholder="Faça sua pesquisa"
+        onchange="listarPetsFiltrados()"
+      /> 
+      <button onclick="listarPetsFiltrados()" type="submit">Pesquisar</button>
+    </div>
+    <table class="pet-table">
+      <thead>
+        <tr>
+          <th><input type="checkbox" aria-label="Selecionar todos" /></th>
+          <th>Id</th>
+          <th>nome</th>
+          <th>tipo</th>
+          <th>raça</th>
+          <th>tamanho</th>
+          <th>ações</th>
+        </tr>
+      </thead>
+      <tbody id="lista-pets"></tbody>
+    </table>
+    -
+  </section>
+</section>

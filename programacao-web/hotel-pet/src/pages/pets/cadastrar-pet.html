@@ -1,0 +1,43 @@
+<section class="content-card-container">
+  <section class="content-card-header">
+    <label><h2>Novo Pet</h2></label>
+  </section>
+
+  <section class="content-card-main">
+    <div class="edit-pet-content-form">
+      <div class="edit-pet-form">
+        <label for="proprietario">Proprietario *</label>
+        <input type="text" id="proprietario" required />
+        <label for="nome">Nome *</label>
+        <input type="text" id="nome" name="nome" required />
+        <label for="tipo">Tipo *</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecione</option>
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
+        </select>
+        <label for="raca">Raça *</label>
+        <input type="text" id="raca" name="raca" required />
+        <label for="tamanho">Tamanho *</label>
+        <select id="tamanho" name="tamanho" required>
+          <option value="">Selecione</option>
+          <option value="pequeno">Pequeno</option>
+          <option value="medio">Medio</option>
+          <option value="grande">Grande</option>
+        </select>
+
+        <div class="form-actions">
+          <button onclick="cadastrarPet()" type="submit">Salvar</button>
+        </div>
+      </div>
+      <div class="edit-pet-container-label">
+        <label>Imagem</label>
+        <div
+          class="edit-pet-image"
+          role="img"
+          aria-label="Área para upload de imagem"
+        ></div>
+      </div>
+    </div>
+  </section>
+</section>

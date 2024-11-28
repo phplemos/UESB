@@ -1,0 +1,87 @@
+<section class="content-card-container">
+  <section class="content-card-header">
+    <label><h2>Usuarios</h2></label>
+    <section class="usuario-header-actions">
+      <button onclick="navigate('usuarios/cadastrar')" type="">
+        Novo
+      </button>
+
+    </section>
+  </section>
+  <section class="content-card-main">
+    <div class="usuarios-search-form">
+      <div>
+        <label for="email">email</label>
+        <input
+          type="email"
+          id="emailFilter"
+          onchange="listarUsuariosFiltrados()"
+          name="email"
+        />
+      </div>
+      <div>
+        <label for="nome">nome</label>
+        <input
+          type="text"
+          id="nomeFilter"
+          onchange="listarUsuariosFiltrados()"
+          name="nome"
+        />
+      </div>
+      <div>
+        <label for="id">Id</label>
+        <input
+          type="text"
+          id="idFilter"
+          onchange="listarUsuariosFiltrados()"
+          name="id"
+        />
+      </div>
+      <div>
+        <label for="criado">criado em</label>
+        <input type="date" id="criadoFilter" name="criado" />
+      </div>
+      <div class="usuarios-filtro-select">
+        <div>
+          <label for="statusFilter">status</label>
+          <select id="statusFilter" name="statusFilter" required>
+            <option value="ativo">Ativo</option>
+            <option value="inativo">Inativo</option>
+          </select>
+        </div>
+        <div>
+          <label for="funcaoFilter">função</label>
+          <select id="funcaoFilter" name="funcaoFilter" required>
+            <option value="">Selecione</option>
+            <option value="funcionario">Funcionário</option>
+            <option value="cliente">Cliente</option>
+            <option value="gerente">Gerente</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button onclick="listarUsuariosFiltrados()" type="submit">
+          Pesquisar
+        </button>
+      </div>
+    </div>
+
+    <table class="pet-table">
+      <thead>
+        <tr>
+          <th><input type="checkbox" aria-label="Selecionar todos" /></th>
+          <th>Id</th>
+          <th>Foto</th>
+          <th>email</th>
+          <th>nome</th>
+          <th>função</th>
+          <th>status</th>
+          <th>criado em</th>
+          <th>ações</th>
+        </tr>
+      </thead>
+      <tbody id="lista-usuarios"></tbody>
+    </table>
+  </section>
+</section>
