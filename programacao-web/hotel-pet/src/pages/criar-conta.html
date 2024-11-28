@@ -1,17 +1,22 @@
-<section
-  class="image-section"
-  role="img"
-  aria-label="Imagem decorativa"
-></section>
+<section class="login-container">
+  <section
+    class="image-section"
+    role="img"
+    aria-label="Imagem decorativa"
+  ></section>
 
-<section class="login-section">
-  <h1>Hotel Pet</h1>
+  <section class="login-section">
+    <h1>Hotel Pet</h1>
 
-  <form>
-    <input type="text" placeholder="Login" />
-    <input type="password" placeholder="Senha" />
-    <button type="submit">Criar conta</button>
-  </form>
+    <div class="form">
+      <div class="form-group-input">
+        <input type="text" placeholder="Login" />
+        <input type="password" placeholder="Senha" />
+      </div>
 
-  <a href="#">Já tem conta? Login</a>
+      <button onclick="navigate('login')"type="submit">Criar conta</button>
+    </div>
+
+    <a onclick="navigate('login')" href="#">Já tem conta? Login</a>
+  </section>
 </section>

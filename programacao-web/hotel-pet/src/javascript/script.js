@@ -105,6 +105,7 @@ export async function navigate(uri, id) {
       }
       window.sessionStorage.setItem("historico", "usuarios/visualizar");
       carregarPagina("usuario/visualizar-perfil");
+      (await usuarioHandler).visualizarUsuario();
       break;
     case "configuracoes":
       window.sessionStorage.setItem("historico", "configuracoes");
@@ -130,7 +131,12 @@ export async function navigate(uri, id) {
       (await reservaHandler).editarReserva();
       break;
     case "login":
+      window.sessionStorage.setItem("historico", "login");
       carregarPagina("login");
+      break;
+    case "criar-conta":
+      window.sessionStorage.setItem("historico", "criar-conta");
+      carregarPagina("criar-conta");
       break;
     default:
       conteudo.innerHTML = "<h1>Página não encontrada</h1>";
@@ -140,7 +146,7 @@ export async function navigate(uri, id) {
 
 // Função que manipula o html para chamar a pagina desejada
 async function carregarPagina(pagina) {
-  if (pagina === "login") {
+  if (pagina === "login" || pagina === "criar-conta") {
     try {
       const resposta = await fetch(`pages/${pagina}.html`);
       const html = await resposta.text();

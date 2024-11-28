@@ -1,37 +1,40 @@
 const script = import("./script.js");
 
 export function visualizarUsuario() {
-  // Pega o id do usuario
-  const id = window.sessionStorage.getItem("idUsuario");
-  // busca o objeto usuario
-  const usuario = getDatasetUsuarios().find((usuario) => usuario.id == id);
-  // Pega os elementos do html
-  const divId = document.getElementById("id");
-  const divEmail = document.getElementById("email");
-  const divNome = document.getElementById("nome");
-  const divTipo = document.getElementById("tipo");
-  const divRaca = document.getElementById("raca");
-  const divTamanho = document.getElementById("tamanho");
-  // Adiciona o conteudo do objeto pet nos elementos do html
+  const idSess = window.sessionStorage.getItem("idUsuario");
+  const usuario = getDatasetUsuarios().find((usuario) => usuario.id == idSess);
+  const id = document.getElementById("id");
+  const email = document.getElementById("email");
+  const nome = document.getElementById("nome");
+  const sobrenome = document.getElementById("sobrenome");
+  const telefone = document.getElementById("telefone");
+  const funcao = document.getElementById("funcao");
+  const status = document.getElementById("status");
+  const senha = document.getElementById("senha");
   const pId = document.createElement("p");
-  pId.innerHTML = " " + pet.id;
-  const proprietario = document.createElement("p");
-  proprietario.innerHTML = " " + pet.proprietario;
-  const nome = document.createElement("p");
-  nome.innerHTML = " " + pet.nome;
-  const tipo = document.createElement("p");
-  tipo.innerHTML = " " + pet.tipo;
-  const raca = document.createElement("p");
-  raca.innerHTML = " " + pet.raca;
-  const tamanho = document.createElement("p");
-  tamanho.innerHTML = " " + pet.tamanho;
-  // Adiciona os elementos no html
-  divId.appendChild(pId);
-  divProprietario.appendChild(proprietario);
-  divNome.appendChild(nome);
-  divTipo.appendChild(tipo);
-  divRaca.appendChild(raca);
-  divTamanho.appendChild(tamanho);
+  pId.innerHTML = " " + usuario.id;
+  pEmail = document.createElement("p");
+  pEmail.innerHTML = " " + usuario.email;
+  const pNome = document.createElement("p");
+  pNome.innerHTML = " " + usuario.nome;
+  const psobrenome = document.createElement("p");
+  psobrenome.innerHTML = " "+ usuario.sobrenome;
+  const ptelefone = document.createElement("p");
+  ptelefone.innerHTML = " " + usuario.telefone;
+  const pfuncao = document.createElement("p");
+  pfuncao.innerHTML = " " +usuario.funcao;
+  const pStatus = document.createElement("p");
+  pStatus.innerHTML = " " + usuario.status;
+  const psenha = document.createElement("p");
+  psenha.innerHTML = "  "+ usuario.senha;
+  email.appendChild(pEmail);
+  nome.appendChild(pNome);
+  sobrenome.appendChild(psobrenome);
+  telefone.appendChild(ptelefone);
+  funcao.appendChild(pfuncao);
+  status.appendChild(pStatus);
+  senha.appendChild(psenha);
+  id.appendChild(pId)
 }
 
 export function listarUsuarios(usuarios) {
